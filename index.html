@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <!--google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<!--map-->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+<!--*******************************-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+  <div class="header">
+    <img src="/images/pattern-bg.png" class="header_back_img">
+    <h1>IP Address Tracker</h1>
+    <div class="search_div">
+      <input type="search" id="ip_search" placeholder="enter a invalid IP address">
+      <div id="search_button"><img src="/images/arrow.svg"></div>
+    </div>
+    <div class="detail_box">
+      <div>
+        <h4>IP ADDRESS</h4>
+        <p id="ip_adress">192.212.174.101</p>
+      </div>
+      <hr>
+      <div>
+        <h4>LOCATION</h4>
+        <p id="location">192.212.174.101</p>
+      </div>
+      <hr>
+      <div>
+        <h4>TIMEZONE</h4>
+        <p id="timeZone">192.212.174.101</p>
+      </div>
+      <hr>
+      <div>
+        <h4>ISP</h4>
+        <p id="isp">192.212.174.101</p>
+      </div>
+    </div>
+  </div>
+  <div id="map"></div>
+  <div class="attribution">
+    Coded by ido atias.
+  </div>
+  <script src="/main.js"></script>
+</body>
+</html>
