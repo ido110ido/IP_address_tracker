@@ -97,6 +97,13 @@ p{
     font-size: 20px;
     color: #2B2B2B;
 }
+#invalid_messege{
+    display: none;
+    margin: 5px;
+    font-size: 12px;
+    color: red;
+    font-weight: 300;
+}
 #map {
     z-index: 0;
     display: flex;

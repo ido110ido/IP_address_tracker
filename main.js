@@ -4,6 +4,7 @@ const ip_adress = document.getElementById("ip_adress");
 const locationDiv = document.getElementById("location");
 const timeZone = document.getElementById("timeZone");
 const isp = document.getElementById("isp");
+const invalid_messege = document.getElementById("invalid_messege");
 const locationIcon = L.icon({
   iconUrl: "../images/icon-location.svg",
   iconAnchor: [23, 56],
@@ -12,6 +13,9 @@ let map;
 search_button.addEventListener("click", () => {
   if (ValidateIPaddress(ip_search.value)) {
     getLocationOfIdAndProcessIt(ip_search.value);
+    invalid_messege.style.display = "none";
+  } else {
+    invalid_messege.style.display = "block";
   }
   ip_search.value = "";
 });
@@ -73,7 +77,6 @@ const ValidateIPaddress = (ipaddress) => {
   if (ipTester.test(ipaddress)) {
     return true;
   }
-  alert("You have entered an invalid IP address!");
   return false;
 };
 getLocationOfIdAndProcessIt("176.229.188.203");
