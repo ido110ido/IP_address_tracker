@@ -20,6 +20,24 @@ search_button.addEventListener("click", () => {
   ip_search.value = "";
 });
 /**
+ * on window load get user ip adress and present it using
+ * getLocationOfIdAndProcessIt
+ * @param {*} event
+ */
+window.onload = (event) => {
+  fetch("https://api.ipify.org/?format=json")
+    .then((data) => {
+      if (data.ok) {
+        return data.json();
+      } else {
+        throw new Error(data.statusText);
+      }
+    })
+    .then((data) => {
+      getLocationOfIdAndProcessIt(data.ip);
+    });
+};
+/**
  * it takes an ip and if we get information from api
  * it will display data on screan using presentIpInMap and presentIpInTable
  * @param {ip adress for search} ip
@@ -79,4 +97,3 @@ const ValidateIPaddress = (ipaddress) => {
   }
   return false;
 };
-getLocationOfIdAndProcessIt("176.229.188.203");
